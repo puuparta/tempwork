@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>test Ws mqtt.js</title>
+</head>
+<body>
+<script src="/js/browserMqtt.js"></script>
+<script>
+        var client = mqtt.connect('mqtt://213.138.147.225:1883');
+
+        client.on('connect', function () {
+            client.subscribe('/hfp/journey/+/+/+/+/+/+/+/60;24/+/#');
+            //client.subscribe('/hfp/journey/+/+/+/+/+/+/+/60;24/19/#');
+            //client.subscribe('/hfp/journey/bus/+/4611/#');
+        });
+
+        client.on('message', function (topic, message) {
+            // message is Buffer 
+            var msg_utf8 = message.toString('utf8');
+            var data = JSON.parse(msg_utf8);
+            //counter++;
+            console.log(data.VP);
+            /*
+            if(counter<100) {
+                socketbuffer.push(data.VP);
+            }
+            else {
+                websocket.emit('routedata', socketbuffer);
+                socketbuffer=[];
+                counter=0;
+            }
+            */
+        }); 
+
+    </script>
+</body>
+</html>

@@ -21,7 +21,7 @@ var counter=0;
 var websocketSubscribers = new Array();
 var socket_ids = [];
 
-exports.msqttClient = (topic, callback) => {
+exports.msqttClient = function(topic, callback) {
     client = mqtt.connect('mqtt://213.138.147.225:1883');
     client.on('connect', function () {
         client.subscribe(topic); 
@@ -36,7 +36,7 @@ exports.msqttClient = (topic, callback) => {
 }
 
 /* PH: NOT USED NOW. */
-exports.subscribe = (old_topic, new_topic) => {
+exports.subscribe = function(old_topic, new_topic) {
     client.unsubscribe(old_topic);
     client.subscribe(new_topic);   
 };

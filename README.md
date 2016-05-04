@@ -48,6 +48,7 @@
 ### Docker Composed
 
   To run all three services as a linked docker images goto root of your clone and run:
+
     $ docker-compose build
     $ docker-compose up
 

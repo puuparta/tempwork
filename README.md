@@ -40,9 +40,13 @@
     
   and goto: http://localhost:3000
 
-### Composed docker image 
-
-  will be coming...
+### Docker images 
+  
+  Not recommended to run yet with docker.
+  Available only for hsl-map-server: https://hub.docker.com/r/fairview/hsl-map-server/
+  This does not contain link to mongodb and hsl-route-rest so "Valitse Linja"-control is not available.
+  
+  Composed and linked images will be coming later.
 
 
 

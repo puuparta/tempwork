@@ -42,13 +42,14 @@
 
 ### Docker images 
   
-  Not recommended to run yet with docker.
-  Available only for hsl-map-server: https://hub.docker.com/r/fairview/hsl-map-server/
+  Published docker image available for hsl-map-server: https://hub.docker.com/r/fairview/hsl-map-server/
   This does not contain link to mongodb and hsl-route-rest so "Valitse Linja"-control is not available.
   
-  Composed and linked images will be coming later.
+### Docker Composed
 
-
+  To run all three services as a linked docker images goto root of your clone and run:
+    $ docker-compose build
+    $ docker-compose up
 
 ### Screenshot
 

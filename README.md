@@ -11,7 +11,7 @@
   - just hosting some GTFS converted static data like routes which is used now
   
 ### hsl-route-rest
-  - tiny REST API. Only GET: http://localhost:3030 
+  - tiny REST API to get list of routes: http://localhost:3030/api/list
 
 ### hsl-map-server
   - frontend and express backend

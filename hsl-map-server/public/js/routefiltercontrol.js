@@ -47,10 +47,8 @@ var RouteFilterControl = {
 
     getRouteList: function() {
 
-        var url='http://localhost:3030/api/list';
-
         $.ajax( {
-            url : url,
+            url : './api/list', //'http://localhost:3030/api/list';
             type: "GET",
             dataType : "json",
             beforeSend : function(xhr) {
@@ -66,17 +64,5 @@ var RouteFilterControl = {
                 console.log(status);
             }
         });
-
-        /*
-        {
-            "_id" : ObjectId("5725c84c9ce33e1c5e2fc858"),
-            "route_id" : "1007B",
-            "agency_id" : "HSL",
-            "route_short_name" : "7B",
-            "route_long_name" : "Senaatintori-Pasila-Töölö-Senaatintori",
-            "route_desc" : "",
-            "route_type" : "0",
-            "route_url" : "http://aikataulut.hsl.fi/linjat/fi/h7b.html"
-        }*/
     }    
 }

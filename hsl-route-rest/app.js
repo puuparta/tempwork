@@ -15,7 +15,7 @@ var routes = require('./routes/index');
 
 // mongoose ODM
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/gtfs');
+mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost/gtfs');
 
 var app = express();
 

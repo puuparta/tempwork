@@ -18,6 +18,9 @@
     <!-- NOT IN USE. Tested and works better: <script src="/js/browserMqtt.js"></script> -->
 </head>
 <body>
+  <script>
+    var rest_api_url = '{{ rest_api }}';
+  </script>
   <script src="/socket.io/socket.io.js"></script>
   <div id="map"></div> 
   <div id="control-div" class="control-div">
